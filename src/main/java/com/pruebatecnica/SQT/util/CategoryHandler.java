@@ -61,6 +61,11 @@ public class CategoryHandler {
     }
 
 
+    public String getKeywordCategories(int categoryById){
+        Category category = findCateroryById(this.categoryRoot, categoryById);
+        return category.getCategorykeywords().toString();
+    }
+
     public int findLevelById(int categoryTargetId) {
         Category result = findCateroryById(this.categoryRoot, categoryTargetId);
         if(result != null){
